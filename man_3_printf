@@ -1,0 +1,18 @@
+man_3_printf
+
+_printf - Man page
+
+Name
+	_printf - Produce output according to a format.
+
+Description
+	The function produces output according to a format. Format controls the output just like in the printf function from the standard library.
+	- %c a character
+	- %s a string
+	- %% a single %
+
+Return Value
+	On success, this function returns the number of characters printed(excluding the null byte used to end output to strings
+Authors
+	Cyrus Houngue & Expédit AZA.
+
