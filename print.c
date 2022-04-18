@@ -40,7 +40,7 @@ int _print_int(long int var)
 		var = -var;
 	}
 	if (var / 10)
-		count += _print_nt(var / 10);
+		count += _print_int(var / 10);
 	_putchar(var % 10 + '0');
 	count += 1;
 	return (count);
