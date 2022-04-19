@@ -10,6 +10,16 @@ int _to_binary(unsigned int n)
 {
 	int tab[10], i, count = 0;
 
+	if (n == 0)
+	{
+		count = _putchar('0');
+		return (count);
+	}
+	if (n == 1)
+	{
+		count = _putchar('1');
+		return (count);
+	}
 	for (i = 0; n > 0; i++)
 	{
 		tab[i] = n % 2;
@@ -18,8 +28,7 @@ int _to_binary(unsigned int n)
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		_putchar(tab[i] + '0');
-		count++;
+		count = _putchar(tab[i] + '0');
 	}
 	return (count);
 }
