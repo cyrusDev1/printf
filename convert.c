@@ -12,23 +12,23 @@ int _to_binary(unsigned int n)
 
 	if (n == 0)
 	{
-		count = _putchar('0');
+		count += _putchar('0');
 		return (count);
 	}
 	if (n == 1)
 	{
-		count = _putchar('1');
+		count += _putchar('1');
 		return (count);
 	}
 	for (i = 0; n > 0; i++)
 	{
-		tab[i] = n % 2;
+		tab[i] = '0' + (n % 2);
 		n /= 2;
 	}
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		count = _putchar(tab[i] + '0');
+		count += _putchar(tab[i]);
 	}
 	return (count);
 }
