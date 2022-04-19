@@ -11,5 +11,6 @@ int _print_str(char *string);
 int _printf(const char *format, ...);
 int _print_int(long int var);
 int _to_binary(unsigned int n);
-
+int _to_octal(unsigned int n);
+int _to_hexa(unsigned int n);
 #endif
