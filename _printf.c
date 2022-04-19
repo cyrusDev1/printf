@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 					total += _print_int((long)(va_arg(args, int)));
 					break;
 				case 'b':
-					total += _to_binary(va_arg(args, int));
+					total += _to_binary(va_arg(args, unsigned int));
 					break;
 				default:
 					_putchar('%');
