@@ -8,7 +8,7 @@
 
 int _to_binary(unsigned int n)
 {
-	int tab[sizeof(unsigned int) * 10], i, count = 0;
+	int tab[sizeof(unsigned int) * 8], i, count = 0;
 
 	if (n == 0)
 	{
