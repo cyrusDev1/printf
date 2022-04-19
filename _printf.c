@@ -49,13 +49,13 @@ int _printf(const char *format, ...)
 					total += _print_int(va_arg(args, unsigned int));
 					break;
 				case 'o':
-					total += _to_octal(va_arg(args, int));
+					total += _to_octal(va_arg(args, unsigned int));
 					break;
 				case 'x':
-					total += _to_hexa(va_arg(args, int));
+					total += _to_hexa(va_arg(args, unsigned int));
 					break;
 				case 'X':
-					total += _to_hexa(va_arg(args, int));
+					total += _to_hexa(va_arg(args, unsigned int));
 					break;
 				default:
 					_putchar('%');
