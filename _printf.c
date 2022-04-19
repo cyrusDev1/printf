@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 					total += _to_hexa(va_arg(args, unsigned int));
 					break;
 				case 'X':
-					total += _to_hexa(va_arg(args, unsigned int));
+					total += _to_hexa_x(va_arg(args, unsigned int));
 					break;
 				default:
 					_putchar('%');

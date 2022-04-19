@@ -59,7 +59,7 @@ int _to_octal(unsigned int n)
  * Return: hexadecimal number
  */
 
-int _to_hexa(unsigned int n)
+int _to_hexa_x(unsigned int n)
 {
 	int count = 0, mod, hex[sizeof(unsigned int) * 8], i;
 
@@ -76,3 +76,28 @@ int _to_hexa(unsigned int n)
 		count += _putchar(hex[i]);
 	return (count);
 }
+
+/**
+ * _to_hexa - convert in hexa
+ * @n: number
+ * Return: hexadecimal number
+ */
+
+int _to_hexa(unsigned int n)
+{
+	int count = 0, mod, hex[sizeof(unsigned int) * 8], i;
+
+	for (i = 0; n != 0; i++)
+	{
+		mod = n % 16;
+		if (mod >= 10)
+			hex[i] = 87 + mod;
+		else
+			hex[i] = 48 + mod;
+	n /= 16;
+	}
+	for (i = i - 1; i >= 0; i--)
+		count += _putchar(hex[i]);
+	return (count);
+}
+
