@@ -19,7 +19,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			flag = 1;
-		}else if (flag == 1)
+		}
+		else if (flag == 1)
 		{
 			flag = 0;
 			switch (format[i])
@@ -40,6 +41,9 @@ int _printf(const char *format, ...)
 					break;
 				case 'i':
 					total += _print_int((long)(va_arg(args, int)));
+					break;
+				case 'b':
+					total += _to_binary(va_arg(args, int));
 					break;
 				default:
 					_putchar('%');
